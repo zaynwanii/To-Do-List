@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do_List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="box" id="heading">
+        <h1>
+            <%= today %>
+        </h1>
+    </div>
+
+    <div class="box">
+        
+            <% for (let index=0; index <activity.length; index++) {%>
+                
+                <div class="item">
+                <% const element=activity[index]; %>
+                <input type="checkbox">
+                    <p> <%= element %></p>
+                    
+        </div>
+        <% } %>
+        <form class="item" action="/" method="post">
+
+            <input type="text" name="task" placeholder="New Item" autocomplete="off">
+            <input type="submit" value="+" class="button">
+        </form>
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>
